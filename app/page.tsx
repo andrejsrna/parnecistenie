@@ -52,9 +52,47 @@ const pricing = [
   ["Čistenie topánok", "10 €"],
 ];
 
+const faqs = [
+  {
+    q: "Kde pôsobíte?",
+    a: "Poskytujeme tepovanie a parné čistenie v Bratislave a celom okolí — Senec, Pezinok, Malacky a priľahlé obce. Prídeme priamo k vám domov.",
+  },
+  {
+    q: "Ako dlho trvá tepovanie sedačky?",
+    a: "Bežná dvojmiestna sedačka trvá 30–60 minút. Rohová sedačka alebo väčší gauč 60–90 minút. Presný čas závisí od stavu čalúnenia.",
+  },
+  {
+    q: "Kedy môžem sedačku po tepovaní používať?",
+    a: "Odporúčame počkať 2–4 hodiny, kým čalúnenie úplne vyschne. Pri parnom čistení je doba schnutia kratšia ako pri klasickom tepovaní.",
+  },
+  {
+    q: "Používate chemické prostriedky?",
+    a: "Pracujeme primárne s parou a šetrnými prípravkami. Na väčšinu povrchov nepotrebujeme agresívnu chémiu — para sama odstraňuje baktérie a pachy.",
+  },
+  {
+    q: "Čistíte aj autá?",
+    a: "Áno, čistíme kompletné interiéry vozidiel — sedadlá, podlahy, kufor aj čalúnenie dverí. Tepovanie auta začína od 70 €.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* ── Hero ── */}
       <header className="hero">
         <div className="steam" />
@@ -63,7 +101,7 @@ export default function Home() {
           <a href="/">
             <Image
               src="/logo.png"
-              alt="Parneupratovanie.sk – Tepovanie"
+              alt="Parneupratovanie.sk – Tepovanie a parné čistenie"
               width={300}
               height={300}
               className="logo-img"
@@ -107,7 +145,7 @@ export default function Home() {
 
       {/* ── Pricing ── */}
       <section className="section" style={{ paddingTop: 0 }}>
-        <h2>Cenník služieb</h2>
+        <h2>Cenník tepovacích služieb</h2>
         <div className="pricing-wrap" style={{ marginTop: "40px" }}>
           <table>
             <thead>
@@ -128,10 +166,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FAQ ── */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <h2>Časté otázky</h2>
+        <p className="subtitle">Všetko čo potrebujete vedieť pred objednávkou</p>
+        <div className="faq-list">
+          {faqs.map(({ q, a }) => (
+            <details className="faq-item" key={q}>
+              <summary className="faq-question">{q}</summary>
+              <p className="faq-answer">{a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Localities ── */}
+      <section className="section localities" style={{ paddingTop: 0 }}>
+        <h2>Kde pôsobíme?</h2>
+        <p className="subtitle">
+          Tepovanie a parné čistenie priamo u vás doma
+        </p>
+        <div className="grid-cards">
+          <div className="card">
+            <h3>📍 Bratislava</h3>
+            <p>
+              Tepovanie sedačiek, matracov a kobercov v celej Bratislave —
+              Petržalka, Ružinov, Dúbravka, Nové Mesto aj ďalšie časti mesta.
+            </p>
+          </div>
+          <div className="card">
+            <h3>📍 Senec a okolie</h3>
+            <p>
+              Dochádzame do Senca, Bernolákova, Zálesí a obcí v okolí Senca.
+              Tepovanie auta aj domácnosti na mieste.
+            </p>
+          </div>
+          <div className="card">
+            <h3>📍 Pezinok a Malacky</h3>
+            <p>
+              Pokrývame Pezinok, Modru, Svätý Jur, Malacky a okolie. Zavolajte
+              a dohodneme termín priamo u vás.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="cta">
-        <h2>Objednajte si termín ešte dnes</h2>
-        <div className="phone">0902 791 393</div>
+        <p className="cta-heading">Objednajte si termín ešte dnes</p>
+        <div className="phone">
+          <a href="tel:0902791393" style={{ color: "inherit", textDecoration: "none" }}>
+            0902 791 393
+          </a>
+        </div>
         <p>Bratislava • Senec • Pezinok • Malacky</p>
       </section>
 

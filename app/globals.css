@@ -240,6 +240,72 @@ tr:hover td {
   opacity: 0.9;
 }
 
+/* ── FAQ ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border: 1px solid #e0f2fe;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.06);
+}
+
+.faq-question {
+  padding: 20px 24px;
+  font-weight: 600;
+  color: #0284c7;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #0ea5e9;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.faq-item[open] .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 24px 20px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* ── Localities ── */
+.localities h2 {
+  color: #0284c7;
+}
+
+/* ── CTA heading ── */
+.cta-heading {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 /* ── Floating Button ── */
 .float {
   position: fixed;
