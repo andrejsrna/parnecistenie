@@ -240,6 +240,138 @@ tr:hover td {
   opacity: 0.9;
 }
 
+/* ── Service Hero (kratší ako homepage hero) ── */
+.service-hero {
+  min-height: auto;
+}
+
+.service-hero-content {
+  padding: 3% 8% 7%;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Service content 2-col layout ── */
+.service-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .service-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.service-text p {
+  color: #475569;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+/* ── Checklist ── */
+.checklist {
+  list-style: none;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.checklist li::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: #0284c7;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Benefit items ── */
+.service-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e0f2fe;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.06);
+}
+
+.benefit-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.benefit-item strong {
+  display: block;
+  color: #0284c7;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.benefit-item p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Pricing note ── */
+.pricing-note {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* ── Card as link ── */
+a.card {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+a.card:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ── FAQ ── */
 .faq-list {
   display: flex;

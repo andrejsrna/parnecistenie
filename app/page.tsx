@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Nav from "./components/Nav";
 
 const services = [
   {
@@ -6,6 +6,7 @@ const services = [
     title: "Sedačky a gauče",
     desc: "Hĺbkové tepovanie rohových sedačiek, gaučov, kresiel a čalúneného nábytku.",
     price: "od 45 €",
+    href: "/tepovanie-sedaciek",
   },
   {
     icon: "🛏️",
@@ -97,18 +98,7 @@ export default function Home() {
       <header className="hero">
         <div className="steam" />
 
-        <nav className="nav">
-          <a href="/">
-            <Image
-              src="/logo.png"
-              alt="Parneupratovanie.sk – Tepovanie a parné čistenie"
-              width={300}
-              height={300}
-              className="logo-img"
-              priority
-            />
-          </a>
-        </nav>
+        <Nav />
 
         <div className="hero-content">
           <h1>
@@ -131,15 +121,25 @@ export default function Home() {
         <p className="subtitle">Kompletné služby pre domácnosti aj vozidlá</p>
 
         <div className="grid-cards">
-          {services.map((s) => (
-            <div className="card" key={s.title}>
-              <h3>
-                {s.icon} {s.title}
-              </h3>
-              <p>{s.desc}</p>
-              <div className="price">{s.price}</div>
-            </div>
-          ))}
+          {services.map((s) =>
+            s.href ? (
+              <a className="card" href={s.href} key={s.title}>
+                <h3>
+                  {s.icon} {s.title}
+                </h3>
+                <p>{s.desc}</p>
+                <div className="price">{s.price}</div>
+              </a>
+            ) : (
+              <div className="card" key={s.title}>
+                <h3>
+                  {s.icon} {s.title}
+                </h3>
+                <p>{s.desc}</p>
+                <div className="price">{s.price}</div>
+              </div>
+            )
+          )}
         </div>
       </section>
 
