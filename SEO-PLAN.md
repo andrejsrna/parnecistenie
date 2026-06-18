@@ -10,6 +10,8 @@ Každá landing page cieli na **1 konkrétny zámer hľadača** — služba, lok
 | Stránka | URL | Status |
 |---|---|---|
 | Homepage | `/` | ✅ live |
+| Tepovanie sedačiek | `/tepovanie-sedaciek` | ✅ live |
+| Tepovanie auta | `/tepovanie-auta` | ✅ live |
 
 ---
 

@@ -25,6 +25,7 @@ const services = [
     title: "Interiéry vozidiel",
     desc: "Sedadlá, podlahy, kufor, čalúnenie dverí a kompletné osvieženie interiéru auta.",
     price: "od 70 €",
+    href: "/tepovanie-auta",
   },
   {
     icon: "👟",
