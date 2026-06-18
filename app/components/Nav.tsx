@@ -4,6 +4,10 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <nav className="nav">
+      <ul className="nav-links nav-left">
+        <li><Link href="/tepovanie-sedaciek">Tepovanie sedačiek</Link></li>
+        <li><Link href="/tepovanie-auta">Tepovanie auta</Link></li>
+      </ul>
       <Link href="/">
         <Image
           src="/logo.png"
@@ -14,11 +18,9 @@ export default function Nav() {
           priority
         />
       </Link>
-      <ul className="nav-links">
-        <li><Link href="/tepovanie-sedaciek">Tepovanie sedačiek</Link></li>
-        <li><Link href="/tepovanie-auta">Tepovanie auta</Link></li>
-        <li><a href="tel:0902791393" className="nav-cta">📞 0902 791 393</a></li>
-      </ul>
+      <div className="nav-right">
+        <a href="tel:0902791393" className="nav-cta">📞 0902 791 393</a>
+      </div>
     </nav>
   );
 }

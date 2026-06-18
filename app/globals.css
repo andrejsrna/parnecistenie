@@ -65,12 +65,17 @@ body {
   z-index: 2;
 }
 
-.nav > a:first-child {
+.nav-left {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.nav > a {
   grid-column: 2;
   justify-self: center;
 }
 
-.nav-links {
+.nav-right {
   grid-column: 3;
   justify-self: end;
 }
@@ -117,11 +122,7 @@ body {
 }
 
 @media (max-width: 640px) {
-  .nav-links {
-    gap: 4px;
-  }
-
-  .nav-links li:not(:last-child) {
+  .nav-left {
     display: none;
   }
 }
