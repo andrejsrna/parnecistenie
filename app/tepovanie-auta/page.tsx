@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Nav from "../components/Nav";
 
 export const metadata: Metadata = {
@@ -117,7 +118,7 @@ export default function TepovanieAuta() {
         <Nav />
         <div className="hero-content service-hero-content">
           <p className="breadcrumb">
-            <a href="/" className="breadcrumb-link">Domov</a> › Tepovanie auta
+            <Link href="/" className="breadcrumb-link">Domov</Link> › Tepovanie auta
           </p>
           <h1>Tepovanie auta Bratislava – interiér od 70 €</h1>
           <p>

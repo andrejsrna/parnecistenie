@@ -90,6 +90,34 @@ const localBusinessSchema = {
   },
 };
 
+function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div className="footer-col">
+          <h4>Spoločnosť</h4>
+          <p>Enhold s.r.o.</p>
+          <p>Drobného 1900/2</p>
+          <p>841 02 Bratislava — Dúbravka</p>
+        </div>
+        <div className="footer-col">
+          <h4>Registrácia</h4>
+          <p>IČO 55400817</p>
+          <p>DIČ 2121985954</p>
+          <p>IČ DPH SK2121985954</p>
+          <p>Platca DPH od 1.1.2024</p>
+        </div>
+        <div className="footer-col">
+          <h4>Kontakt</h4>
+          <p><a href="mailto:ahoj@enhold.sk">ahoj@enhold.sk</a></p>
+          <p><a href="tel:+421914230321">+421 914 230 321</a></p>
+        </div>
+      </div>
+      <p className="footer-copy">© {new Date().getFullYear()} Enhold s.r.o. Všetky práva vyhradené.</p>
+    </footer>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -103,7 +131,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Nav() {
   return (
     <nav className="nav">
-      <a href="/">
+      <Link href="/">
         <Image
           src="/logo.png"
           alt="Parneupratovanie.sk – Tepovanie a parné čistenie"
@@ -12,7 +13,12 @@ export default function Nav() {
           className="logo-img"
           priority
         />
-      </a>
+      </Link>
+      <ul className="nav-links">
+        <li><Link href="/tepovanie-sedaciek">Tepovanie sedačiek</Link></li>
+        <li><Link href="/tepovanie-auta">Tepovanie auta</Link></li>
+        <li><a href="tel:0902791393" className="nav-cta">📞 0902 791 393</a></li>
+      </ul>
     </nav>
   );
 }
