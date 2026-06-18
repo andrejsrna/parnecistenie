@@ -110,15 +110,21 @@ body {
 }
 
 .nav-cta {
-  background: white !important;
-  color: #0284c7 !important;
-  font-weight: 700 !important;
+  display: inline-block;
+  background: white;
+  color: #0284c7;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, color 0.2s;
 }
 
 .nav-cta:hover {
-  background: #f0f9ff !important;
-  color: #0284c7 !important;
+  background: #f0f9ff;
+  color: #0284c7;
 }
 
 @media (max-width: 640px) {
