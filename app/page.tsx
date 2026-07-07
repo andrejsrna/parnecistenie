@@ -1,4 +1,5 @@
 import Nav from "./components/Nav";
+import HeroVideo from "./components/HeroVideo";
 
 const services = [
   {
@@ -115,16 +116,7 @@ export default function Home() {
               📞 Zavolať 0902 791 393
             </a>
           </div>
-          <video
-            className="hero-video"
-            src="/hero.mp4"
-            poster="/hero-poster.jpg"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-          />
+          <HeroVideo />
         </div>
       </header>
 
