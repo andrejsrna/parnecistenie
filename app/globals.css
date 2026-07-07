@@ -218,13 +218,17 @@ body {
 
 /* ── Video modal ── */
 .video-modal {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 100;
   background: rgba(0, 0, 0, 0.9);
-  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.video-modal.is-open {
+  display: flex;
 }
 
 .video-modal-player {
