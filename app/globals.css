@@ -62,7 +62,7 @@ body {
   align-items: center;
   padding: 24px 8%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .nav-left {
