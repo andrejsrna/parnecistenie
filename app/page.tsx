@@ -102,17 +102,29 @@ export default function Home() {
         <Nav />
 
         <div className="hero-content">
-          <h1>
-            Profesionálne tepovanie a parné čistenie v Bratislavskom kraji
-          </h1>
-          <p>
-            Odstránime škvrny, pachy, baktérie a nečistoty zo sedačiek,
-            matracov, kobercov, automobilov aj obuvi. Vaše priestory budú opäť
-            svieže, čisté a pripravené na každodenné používanie.
-          </p>
-          <a className="btn" href="tel:0902791393">
-            📞 Zavolať 0902 791 393
-          </a>
+          <div className="hero-text">
+            <h1>
+              HĹBKOVÉ tepovanie a parné čistenie v Bratislavskom kraji
+            </h1>
+            <p>
+              Odstránime škvrny, pachy, baktérie a nečistoty zo sedačiek,
+              matracov, kobercov, automobilov aj obuvi. Vaše priestory budú
+              opäť svieže, čisté a pripravené na každodenné používanie.
+            </p>
+            <a className="btn" href="tel:0902791393">
+              📞 Zavolať 0902 791 393
+            </a>
+          </div>
+          <video
+            className="hero-video"
+            src="/hero.mp4"
+            poster="/hero-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+          />
         </div>
       </header>
 
