@@ -113,7 +113,7 @@ function Footer() {
           <p><a href="tel:+421914230321">+421 914 230 321</a></p>
         </div>
       </div>
-      <p className="footer-copy">© {new Date().getFullYear()} Enhold s.r.o. Všetky práva vyhradené.</p>
+      <p className="footer-copy">© {new Date().getFullYear()} Enhold s.r.o. Všetky práva vyhradené. | Technológia: <a href="https://synthbit.sk" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>SynthBit</a></p>
     </footer>
   );
 }
